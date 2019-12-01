@@ -1,0 +1,16 @@
+<div class="page-content">
+  <h1>Two-way binding</h1>
+  <div class="row">
+    <div class="col">
+      <h4>Input</h4>
+      <div class="input-group mb-3">
+        <input type="text" [(ngModel)]="value" class="form-control">
+        <div class="input-group-append">
+          <button class="btn btn-outline-danger" [disabled]="!value" type="button" (click)="clearValue()">clear</button>
+        </div>
+      </div>
+      <h4>Output</h4>
+      <p class="value p-1 output">{{value}}</p>
+    </div>
+  </div>
+</div>
