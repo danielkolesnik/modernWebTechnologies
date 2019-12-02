@@ -1,17 +1,22 @@
 // outsource
 import { BrowserModule } from '@angular/platform-browser';
-import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { CommonModule } from '@angular/common';
 // modules
 import { AppRoutingModule, routingComponents } from './app-routing.module';
+import { FormsModule } from '@angular/forms';
 
 // components
 import { LayoutComponent } from './states/layout.component';
 import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
-import {FormsModule} from '@angular/forms';
+import { EvenComponent } from './components/even/even.component';
+import { OddComponent } from './components/odd/odd.component';
+
+// services
+import { InfineNumberGeneratorService } from './services/infine-number-generator.service';
 
 
 @NgModule({
@@ -19,6 +24,8 @@ import {FormsModule} from '@angular/forms';
     LayoutComponent,
     HeaderComponent,
     FooterComponent,
+    EvenComponent,
+    OddComponent,
     routingComponents
   ],
   imports: [
@@ -29,7 +36,7 @@ import {FormsModule} from '@angular/forms';
     AppRoutingModule,
     FormsModule
   ],
-  providers: [],
+  providers: [InfineNumberGeneratorService],
   bootstrap: [LayoutComponent]
 })
 export class AppModule { }
